@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>INEMAPROMO — índice de todas as páginas</title>
+<meta name="description" content="Índice das landpages do INEMA: comunidade inema.club (inema), workshop INTELECTO (intelecto4d) e as versões corrigidas pela crítica /impeccable (critica).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Hanken+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --base: oklch(0.15 0.011 250);
+    --panel: oklch(0.19 0.013 250);
+    --text: oklch(0.96 0.008 250);
+    --muted: oklch(0.75 0.018 250);
+    --faint: oklch(0.62 0.02 250);
+    --ice: oklch(0.82 0.1 226);
+    --ember: oklch(0.72 0.17 52);
+    --mint: oklch(0.82 0.12 165);
+    --line: oklch(0.5 0.02 250 / 0.3);
+    --line-2: oklch(0.6 0.03 250 / 0.55);
+    --ease: cubic-bezier(.2,.7,.2,1);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{-webkit-font-smoothing:antialiased}
+  body{background:var(--base);color:var(--text);font-family:'Hanken Grotesk',sans-serif;line-height:1.65;min-height:100vh;
+    background-image:radial-gradient(70% 50% at 85% -5%, oklch(0.6 0.1 226/.06), transparent 60%), radial-gradient(60% 50% at 0% 100%, oklch(0.6 0.14 52/.05), transparent 60%)}
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--ice);color:var(--base)}
+  .display{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;letter-spacing:-.015em;line-height:1}
+  .mono{font-family:'JetBrains Mono',monospace;letter-spacing:.04em}
+  .wrap{max-width:1040px;margin:0 auto;padding:clamp(48px,9vh,110px) clamp(24px,6vw,40px)}
+
+  /* ---------- header ---------- */
+  header .kick{font-family:'JetBrains Mono';font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--faint);display:flex;align-items:center;gap:12px}
+  header .kick::before{content:"";width:30px;height:1px;background:var(--faint)}
+  header h1{font-size:clamp(2.2rem,6vw,4rem);margin-top:22px;max-width:18ch}
+  header p.sub{color:var(--muted);margin-top:18px;max-width:62ch;font-weight:300;font-size:1.06rem}
+  .stat{display:inline-flex;align-items:baseline;gap:10px;margin-top:24px;font-family:'JetBrains Mono';font-size:.8rem;color:var(--muted)}
+  .stat b{font-family:'Bricolage Grotesque';font-size:1.4rem;color:var(--ice)}
+  .stat .arrow{color:var(--faint)}
+
+  /* ---------- folder group ---------- */
+  .grp{margin-top:clamp(46px,7vh,70px)}
+  .grp-head{display:flex;align-items:baseline;justify-content:space-between;gap:18px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:16px}
+  .grp-head .name{font-family:'JetBrains Mono';font-size:1rem;letter-spacing:.04em}
+  .grp-head .name .slash{color:var(--faint)}
+  .grp.inema .name .dir{color:var(--ice)} .grp.intelecto .name .dir{color:var(--ember)} .grp.critica .name .dir{color:var(--mint)}
+  .grp-head .desc{color:var(--muted);font-size:.92rem;font-weight:300;flex:1;min-width:220px;max-width:46ch}
+  .grp-head .folder{font-family:'JetBrains Mono';font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+  .grp.inema .folder{color:var(--ice)} .grp.intelecto .folder{color:var(--ember)} .grp.critica .folder{color:var(--mint)}
+  .grp-head .folder:hover{text-decoration:underline}
+
+  .grid{margin-top:18px;display:grid;gap:14px}
+  @media(min-width:680px){.grid{grid-template-columns:1fr 1fr}}
+
+  .opt{position:relative;display:flex;flex-direction:column;border:1px solid var(--line-2);border-radius:6px;padding:24px 26px;background:var(--panel);transition:transform .4s var(--ease),border-color .4s}
+  .opt:hover{transform:translateY(-4px)}
+  .grp.inema .opt:hover{border-color:var(--ice)} .grp.intelecto .opt:hover{border-color:var(--ember)} .grp.critica .opt:hover{border-color:var(--mint)}
+  .opt .file{font-family:'JetBrains Mono';font-size:.68rem;letter-spacing:.04em;color:var(--faint);display:flex;align-items:center;gap:8px}
+  .opt .file .badge{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;padding:2px 7px;border-radius:99px;border:1px solid var(--line-2);color:var(--muted)}
+  .grp.inema .opt .badge{color:var(--ice);border-color:oklch(0.82 0.1 226/.45)}
+  .grp.intelecto .opt .badge{color:var(--ember);border-color:oklch(0.72 0.17 52/.45)}
+  .grp.critica .opt .badge{color:var(--mint);border-color:oklch(0.82 0.12 165/.45)}
+  .opt h2{font-family:'Bricolage Grotesque';font-weight:800;font-size:1.32rem;margin-top:12px;line-height:1.15}
+  .opt p{color:var(--muted);font-size:.9rem;margin-top:8px;font-weight:300;flex:1}
+  .opt .open{margin-top:20px;font-family:'JetBrains Mono';font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--faint);transition:color .3s}
+  .opt:hover .open{color:var(--text)}
+
+  footer{color:var(--faint);font-family:'JetBrains Mono';font-size:.74rem;margin-top:64px;border-top:1px solid var(--line);padding-top:24px;display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+  footer a:hover{color:var(--text)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="kick">INEMAPROMO · índice</p>
+    <h1 class="display">Todas as páginas, num lugar só.</h1>
+    <p class="sub">As landpages estão organizadas em três pastas: <span class="mono" style="color:var(--ice)">inema</span> (a comunidade inema.club), <span class="mono" style="color:var(--ember)">intelecto4d</span> (o workshop INTELECTO) e <span class="mono" style="color:var(--mint)">critica</span> (as versões refeitas pela crítica de design). Escolha a pasta e abra a página.</p>
+    <span class="stat"><span>3 pastas</span> <span class="arrow">·</span> <b>13</b> <span>páginas</span></span>
+  </header>
+
+  <!-- ========== INEMA ========== -->
+  <section class="grp inema">
+    <div class="grp-head">
+      <div>
+        <div class="name"><span class="dir">inema</span><span class="slash">/</span></div>
+        <p class="desc">Divulgação do <strong style="color:var(--text);font-weight:500">inema.club FREE</strong> — a comunidade gratuita de educação em IA.</p>
+      </div>
+      <a class="folder" href="inema/index.html">abrir pasta →</a>
+    </div>
+    <div class="grid">
+      <a class="opt" href="inema/index.html">
+        <div class="file">inema/index.html <span class="badge">entrada</span></div>
+        <h2>Landpages de divulgação</h2>
+        <p>Hub com as duas versões de divulgação da comunidade.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="inema/movimento.html">
+        <div class="file">inema/movimento.html</div>
+        <h2>A maior escola de IA do Brasil é de graça</h2>
+        <p>Convite ao movimento: educação em IA aberta, para todo mundo.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="inema/rede.html">
+        <div class="file">inema/rede.html</div>
+        <h2>A rede de educação em IA, gratuita</h2>
+        <p>O inema.club como rede nacional de quem aprende e ensina IA.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="inema/casa-segura.html">
+        <div class="file">inema/casa-segura.html</div>
+        <h2>Sua casa segura no inverno da IA</h2>
+        <p>O iglu como abrigo: onde você não enfrenta a IA sozinho.</p>
+        <div class="open">Abrir →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== INTELECTO4D ========== -->
+  <section class="grp intelecto">
+    <div class="grp-head">
+      <div>
+        <div class="name"><span class="dir">intelecto4d</span><span class="slash">/</span></div>
+        <p class="desc">Workshop <strong style="color:var(--text);font-weight:500">INTELECTO</strong> — do zero ao seu Jarvis em 2 dias. Conceito do iglu 3D, frio fora, calor dentro.</p>
+      </div>
+      <a class="folder" href="intelecto4d/index.html">abrir pasta →</a>
+    </div>
+    <div class="grid">
+      <a class="opt" href="intelecto4d/index.html">
+        <div class="file">intelecto4d/index.html <span class="badge">entrada</span></div>
+        <h2>Versões da landpage</h2>
+        <p>Índice da pasta com as quatro versões do workshop.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="intelecto4d/workshop.html">
+        <div class="file">intelecto4d/workshop.html</div>
+        <h2>Workshop ao vivo · 2 dias</h2>
+        <p>Página principal: do zero ao seu Jarvis em dois dias.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="intelecto4d/inverno.html">
+        <div class="file">intelecto4d/inverno.html</div>
+        <h2>Você se aquece construindo</h2>
+        <p>Frio fora, calor dentro: o núcleo do iglu acende enquanto neva.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="intelecto4d/igloo.html">
+        <div class="file">intelecto4d/igloo.html</div>
+        <h2>Inteligência congelada</h2>
+        <p>Conceito do iglu 3D — do zero ao seu Jarvis, abertura glacial.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="intelecto4d/igloo-pro.html">
+        <div class="file">intelecto4d/igloo-pro.html</div>
+        <h2>Experiência glacial</h2>
+        <p>Iglu de vidro, câmera que orbita no scroll, paleta gelo de ponta a ponta.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="intelecto4d/vitrine.html">
+        <div class="file">intelecto4d/vitrine.html <span class="badge">novo</span></div>
+        <h2>Vitrine · estilo Apple</h2>
+        <p>O workshop como produto premium — referência apple.com (nav fixa, hero gigante, scroll cinematográfico).</p>
+        <div class="open">Abrir →</div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ========== CRITICA ========== -->
+  <section class="grp critica">
+    <div class="grp-head">
+      <div>
+        <div class="name"><span class="dir">critica</span><span class="slash">/</span></div>
+        <p class="desc">As landpages do INTELECTO refeitas pela crítica <span class="mono" style="color:var(--text)">/impeccable</span> — de <strong style="color:var(--text);font-weight:500">13 antipadrões para 0</strong>.</p>
+      </div>
+      <a class="folder" href="critica/index.html">abrir pasta →</a>
+    </div>
+    <div class="grid">
+      <a class="opt" href="critica/index.html">
+        <div class="file">critica/index.html <span class="badge">entrada</span></div>
+        <h2>Versões corrigidas</h2>
+        <p>Hub das landpages refeitas, com a crítica de design completa.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="critica/inverno.html">
+        <div class="file">critica/inverno.html</div>
+        <h2>Quente · corrigida</h2>
+        <p>Versão âmbar depois da crítica: tipografia com voz, sem vidro decorativo.</p>
+        <div class="open">Abrir →</div>
+      </a>
+      <a class="opt" href="critica/igloo-pro.html">
+        <div class="file">critica/igloo-pro.html</div>
+        <h2>Fria · corrigida</h2>
+        <p>Versão gelo depois da crítica: paleta OKLCH, listas editoriais no lugar de cards.</p>
+        <div class="open">Abrir →</div>
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© <span id="yr"></span> INEMA · landpages de divulgação</span>
+    <a href="https://inema.club" target="_blank" style="color:var(--ice)">INEMA.CLUB</a>
+  </footer>
+</div>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
