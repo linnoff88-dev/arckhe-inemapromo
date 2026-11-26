@@ -27,7 +27,7 @@ O herói 3D é distinto; a **camada de conteúdo** caía nos tells de IA. Esta p
 | Botões com glow colorido de 30px | Preenchimento sólido + leve elevaçêo no hover |
 | Cores ad-hoc | Paleta em **OKLCH**, neutros tintados pro tom da marca |
 
-Mantido: o 3D (iglu de vidro + fogo no núcleo na quente), a degradaçêo graciosa de WebGL, os CTAs pra inema.vip e o conceito "frio fora, calor dentro".
+Mantido: o 3D (iglu de vidro + fogo no núcleo na quente), a degradaçêo graciosa de WebGL, os CTAs pra ARCKHÉ.vip e o conceito "frio fora, calor dentro".
 
 ## Arquivos
 - `inverno.html` — versêo quente corrigida (frio fora, calor dentro)
